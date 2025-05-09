@@ -33,7 +33,7 @@ const Hero = () => {
             developer.
           </p>
           <div className="flex gap-7">
-            <a href="#about">
+            <a href="#projects">
               <MagicButton
                 title="My works"
                 icon={<FaLocationArrow />}

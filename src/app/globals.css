@@ -79,7 +79,9 @@ body {
     background-position: -10000px 5000px;
   }
 }
-
+.heading {
+  @apply font-bold text-4xl md:text-5xl text-center;
+}
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

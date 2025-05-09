@@ -8,22 +8,22 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Adaptability, Creative Approach and Open Communication ",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/b1.jpg",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Looking for opportunities that can help me Improve myself",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "",
+    img: "/b2.avif",
     spareImg: "",
   },
   {
@@ -48,7 +48,7 @@ export const gridItems = [
   },
 
   {
-    id: 5,
+    id: 2,
     title: "Currently Learning Next.js and exploring AI/ML",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
@@ -72,35 +72,51 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "The Ultimate Cinema",
+    des: "Discover Movies, TV Shows, Celebrities, and Watch Trailers – All at One Place!",
+    img: "/p3.png",
+    iconLists: ["/re.svg", "/tail.svg", "/redux.svg"],
+    link: "https://github.com/Abdeali1310/The_Ultimate_Cinema",
+    live: "https://the-ultimate-cinema.vercel.app/"
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "WanderNest",
+    des: "Designed to simplify the process for property owners to list and showcase their accommodations. With WanderNest, property owners can effortlessly create listings",
+    img: "/p4.png",
+    iconLists: ["/ejs.svg","/bootstrap.svg","/nd.svg","/ex.svg","/md.svg"],
+    link: "https://github.com/Abdeali1310/WanderNest",
+    live: "https://wandernest-d9uf.onrender.com/"
   },
+  
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "AI ChatBot",
+    des: " AI chatbot built with Integrating Google's Gemini Flash 1.5 for conversational AI.",
+    img: "/p2.png",
+    iconLists: ["/re.svg", "nd.svg", ,"/ex.svg","/md.svg", "/ts.svg", "/mui.svg"],
+    link: "https://github.com/Abdeali1310/AI-chatbot",
+    live:null
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "BlissfulWed",
+    des: "Explore the Wedding Events. Your one-stop wedding event booking site created with MERN Stack",
+    img: "/p1.png",
+    iconLists: ["/re.svg", "nd.svg", ,"/ex.svg","/md.svg","/tail.svg", "/mui.svg"],
+    link: "https://github.com/Abdeali1310/BlissfulWed",
+    live:null
+  },
+  
+
+  {
+    id: 5,
+    title: "Mocksy",
+    des: "Your AI-powered mock interview partner. Uses VAPI AI to simulate real interview scenarios. All powered by modern tech stacks like Firebase and Gemini",
+    img: "/p5.png",
+    iconLists: ["/next.svg","/firebase.svg","tail.svg","/shad.svg"],
+    link: "https://github.com/Abdeali1310/Mocksy",
+    live: "https://mocksy-2bgx.vercel.app/"
   },
 ];
 
