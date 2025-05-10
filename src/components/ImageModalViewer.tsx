@@ -10,7 +10,7 @@ export default function ImageModalViewer({ src, alt,link,live,title }: { src: st
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <div className="w-full h-48 relative mb-4 cursor-pointer hover:opacity-80 transition rounded-lg overflow-hidden">
+        <div className="w-full h-48 lg:h-64 relative mb-4 cursor-pointer hover:opacity-80 transition rounded-lg overflow-hidden">
           <Image
             src={src}
             alt={alt}
@@ -23,7 +23,7 @@ export default function ImageModalViewer({ src, alt,link,live,title }: { src: st
       </DialogTrigger>
       <DialogContent className="max-w-5xl p-0 bg-transparent border-none">
         <div className="relative w-full h-[70vh] rounded-lg overflow-hidden">
-            <h3 className="my-2 mx-3 absolute top-36 text-2xl text-center w-full font-serif font-black">{title}</h3>
+            <h3 className="my-2 mx-3 absolute top-32 md:top-26 text-2xl text-center w-full font-serif font-black">{title}</h3>
           <Image
             src={src}
             alt={alt}

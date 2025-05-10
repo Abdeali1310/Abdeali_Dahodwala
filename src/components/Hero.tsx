@@ -7,7 +7,7 @@ import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 const Hero = () => {
   return (
     <>
-      <div className="pb-20 pt-36">
+      <div className=" data-scroll-section pb-20 data-scroll pt-36">
         <div>
           <Spotlight
             className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

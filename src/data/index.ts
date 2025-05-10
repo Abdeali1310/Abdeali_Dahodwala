@@ -79,15 +79,15 @@ export const projects = [
     link: "https://github.com/Abdeali1310/The_Ultimate_Cinema",
     live: "https://the-ultimate-cinema.vercel.app/"
   },
-  {
-    id: 2,
-    title: "WanderNest",
-    des: "Designed to simplify the process for property owners to list and showcase their accommodations. With WanderNest, property owners can effortlessly create listings",
-    img: "/p4.png",
-    iconLists: ["/ejs.svg","/bootstrap.svg","/nd.svg","/ex.svg","/md.svg"],
-    link: "https://github.com/Abdeali1310/WanderNest",
-    live: "https://wandernest-d9uf.onrender.com/"
-  },
+  // {
+  //   id: 2,
+  //   title: "WanderNest",
+  //   des: "Designed to simplify the process for property owners to list and showcase their accommodations. With WanderNest, property owners can effortlessly create listings",
+  //   img: "/p4.png",
+  //   iconLists: ["/ejs.svg","/bootstrap.svg","/nd.svg","/ex.svg","/md.svg"],
+  //   link: "https://github.com/Abdeali1310/WanderNest",
+  //   live: "https://wandernest-d9uf.onrender.com/"
+  // },
   
   {
     id: 3,
@@ -101,7 +101,7 @@ export const projects = [
   {
     id: 4,
     title: "BlissfulWed",
-    des: "Explore the Wedding Events. Your one-stop wedding event booking site created with MERN Stack",
+    des: "Explore the Wedding Events. Your one-stop wedding event booking site , Cashfree Payment Gateway integrated along with Admin Dashboard created with MERN Stack",
     img: "/p1.png",
     iconLists: ["/re.svg", "nd.svg", ,"/ex.svg","/md.svg","/tail.svg", "/mui.svg"],
     link: "https://github.com/Abdeali1310/BlissfulWed",

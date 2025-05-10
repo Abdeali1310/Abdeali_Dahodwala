@@ -1,5 +1,6 @@
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import { Separator } from "./ui/separator";
 
 const Grid = () => {
   return (
@@ -21,6 +22,7 @@ const Grid = () => {
           />
         ))}
       </BentoGrid>
+      <Separator className="bg-gray-600" />
     </section>
   );
 };
