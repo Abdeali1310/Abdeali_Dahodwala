@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 export const metadata: Metadata = {
-  title: "Abdeali's Portfolio",
+  title: "Abdeali Dahodwala",
   description: "Modern Portfolio",
+  icons: {
+    icon: '/profile-modified.ico',
+  },
 };
+
+
 
 export default function RootLayout({
   children,
@@ -14,7 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative dark">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <body className={`relative dark ${roboto.className} antialiased`}>
         <div className="stars fixed top-0 left-0 w-full h-full z-[-1]" />
           {children}
           <Toaster

@@ -30,8 +30,8 @@ const MySkills = () => {
         <h2 className="text-4xl font-serif font-bold text-purple-100">Technical Skills</h2>
         <p className="text-zinc-400 max-w-4xl text-xl  mx-auto my-12">
           I’m actively evolving as a Full-Stack Web Developer with practical
-          experience in the MERN stack (MongoDB, Express.js, React, Node.js) and
-          Next.js. Known for my adaptability and creative problem-solving.
+          experience in the <strong className="text-blue-500">  MERN stack </strong>(MongoDB, Express.js, React, Node.js) and
+          <strong className="text-blue-500"> Next.js</strong>. Known for my adaptability and creative problem-solving.
           Always exploring, always improving.
         </p>
       </div>

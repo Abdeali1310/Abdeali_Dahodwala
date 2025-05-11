@@ -8,7 +8,7 @@ import { Separator } from "./ui/separator";
 
 const RecentProjects = () => {
   return (
-    <div id="projects" className="py-12 my-5  px-4 max-w-4xl mx-auto">
+    <div id="projects" className="py-12 my-5  px-4 max-w-4xl mt-12 mx-auto">
       <h2 className="text-3xl font-bold mb-8 font-serif">Some of My Works</h2>
       <div className="grid grid-cols-1 mb-5 sm:grid-cols-2 items-center justify-center gap-12">
         {projects.map((project) => (
