@@ -33,7 +33,7 @@ const AboutMe = () => {
             can check them out in the{" "}
             <strong>
 
-            <a href="#projects" className="text-grey-500 text-lg underline">
+            <a href="#projects" className="text-purple-500 text-lg">
               Projects
             </a>{" "}
             </strong>

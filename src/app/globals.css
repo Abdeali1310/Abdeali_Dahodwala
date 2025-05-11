@@ -21,13 +21,13 @@
   padding: 2px;
   background: conic-gradient(
     from 0deg,
-    red,
+    magenta,
     magenta,
     blue,
-    cyan,
-    lime,
+    blue,
+    blue,
     magenta,
-    red
+    magenta
   );
   mask: 
     linear-gradient(#fff 0 0) content-box, 
