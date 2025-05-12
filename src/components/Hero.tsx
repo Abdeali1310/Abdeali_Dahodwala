@@ -31,15 +31,15 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="Its Abdeali"
-            className="text-center font-serif text-amber-50 text-[40px] md:text-5xl lg:text-6xl"
-          />
+            className="text-center font-serif  text-blue-700 text-[40px] md:text-5xl lg:text-6xl tracking-wide"
+            />
 
           <p className="text-center md:tracking-wider mb-7 md:mb-4  text-md md:text-lg lg:text-2xl">
             A passionate web developer on a journey of becoming a full stack
             developer.
           </p>
-          <div className="flex gap-7 mt-3 lg:mt-0">
-            <a href="#projects">
+          <div className="flex gap-6 md:gap-7 mt-3 lg:mt-0">
+            <a href="/projects">
               <MagicButton
                 title="My works"
                 icon={<FaLocationArrow />}

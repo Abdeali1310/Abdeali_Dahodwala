@@ -76,15 +76,15 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="py-20 px-4 max-w-6xl mx-auto text-white">
-      <h2 className="text-4xl font-bold text-purple-100 font-serif mb-10 lg:text-center">
+    <section id="contact" className="py-20 px-4 max-w-6xl mx-auto mt-8 text-white">
+      <h2 className="text-4xl font-bold text-purple-100 font-serif mb-10 md:text-center">
         Get In Touch
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Contact Info */}
         <div className="space-y-6">
-          <h3 className="text-2xl font-semibold text-white">
-            Feel free to connect with me!
+          <h3 className="text-xl md:text-2xl font-semibold text-white">
+            Feel free to connect with <strong className="text-purple-500 font-bold">Me</strong>
           </h3>
           <div className="flex items-center gap-3 text-zinc-400">
             <Mail className="text-purple-500" /> abdeali.dahodwala@outlook.com

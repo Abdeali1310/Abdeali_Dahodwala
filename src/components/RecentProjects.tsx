@@ -9,7 +9,14 @@ import { Separator } from "./ui/separator";
 const RecentProjects = () => {
   return (
     <div id="projects" className="py-12 my-5  px-4 max-w-4xl mt-12 mx-auto">
-      <h2 className="text-3xl font-bold mb-8 font-serif">Some of My Works</h2>
+      <h2 className="text-2xl md:text-3xl md:text-center lg:mb-12 text-blue-50 font-bold mb-8 font-serif">
+        Some of My Works
+      </h2>
+      <p className="text-zinc-400 text-lg md:text-xl md:text-center mb-8">
+        Here are some of my recent works that are built with modern <strong className="text-blue-500 font-bold">Tools</strong> and
+        <strong className="text-blue-500 font-bold"> Technologies</strong> along with clean design principles.
+      </p>
+
       <div className="grid grid-cols-1 mb-5 sm:grid-cols-2 items-center justify-center gap-12">
         {projects.map((project) => (
           <div
@@ -75,7 +82,7 @@ const RecentProjects = () => {
               </a>
             </div>
 
-            <div className="hidden lg:flex absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 items-center justify-center gap-6 transition">
+            <div className="hidden lg:flex absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-80 items-center justify-center gap-6 transition">
               {project.live && (
                 <a
                   href={project.live}

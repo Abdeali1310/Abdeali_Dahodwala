@@ -114,7 +114,7 @@ export const projects = [
     title: "Mocksy",
     des: "Your AI-powered mock interview partner. Uses VAPI AI to simulate real interview scenarios. All powered by modern tech stacks like Firebase and Gemini",
     img: "/p5.png",
-    iconLists: ["/next.svg","/firebase.svg","tail.svg","/shad.svg"],
+    iconLists: ["/next.svg","/ts.svg","/firebase.svg","tail.svg","/shadcn.png"],
     link: "https://github.com/Abdeali1310/Mocksy",
     live: "https://mocksy-2bgx.vercel.app/"
   },
