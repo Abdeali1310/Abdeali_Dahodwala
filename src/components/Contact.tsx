@@ -37,7 +37,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setErrors({}); 
+    setErrors({});
 
     const validation = ContactSchema.safeParse(form);
 
@@ -45,10 +45,13 @@ export default function Contact() {
       const fieldErrors = validation.error.flatten().fieldErrors;
 
       const formattedErrors: Record<string, string> = {};
+
       for (const key in fieldErrors) {
-        const messages = fieldErrors[key];
-        if (messages && messages.length > 0) {
-          formattedErrors[key] = messages[0];
+        if (Object.prototype.hasOwnProperty.call(fieldErrors, key)) {
+          const messages = fieldErrors[key as keyof typeof fieldErrors];
+          if (messages && messages.length > 0) {
+            formattedErrors[key] = messages[0];
+          }
         }
       }
 
@@ -77,7 +80,10 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="py-20 px-4 lg:mt-16 max-w-6xl mx-auto mt-8 text-white">
+    <section
+      id="contact"
+      className="py-20 px-4 lg:mt-16 max-w-6xl mx-auto mt-8 text-white"
+    >
       <h2 className="text-4xl font-bold text-purple-500 font-serif mb-10 md:text-center">
         Get In Touch
       </h2>
@@ -85,7 +91,8 @@ export default function Contact() {
         {/* Contact Info */}
         <div className="space-y-6">
           <h3 className="text-xl md:text-2xl font-semibold text-zinc-600 dark:text-white">
-            Feel free to connect with <strong className="text-purple-500 font-bold">Me</strong>
+            Feel free to connect with{" "}
+            <strong className="text-purple-500 font-bold">Me</strong>
           </h3>
           <div className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
             <Mail className="text-purple-500" /> abdeali.dahodwala@outlook.com
@@ -114,7 +121,10 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-4 text-zinc-700 dark:text-white">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 text-zinc-700 dark:text-white"
+        >
           <div className="space-y-3">
             <Label htmlFor="name">Name</Label>
             <Input
@@ -124,7 +134,6 @@ export default function Contact() {
               placeholder="Your Name"
               value={form.name}
               onChange={handleChange}
-              
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.name}</p>
@@ -140,7 +149,6 @@ export default function Contact() {
               placeholder="your.email@example.com"
               value={form.email}
               onChange={handleChange}
-              
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.email}</p>
@@ -156,7 +164,6 @@ export default function Contact() {
               placeholder="Subject"
               value={form.subject}
               onChange={handleChange}
-              
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.subject}</p>
@@ -172,7 +179,6 @@ export default function Contact() {
               rows={5}
               value={form.message}
               onChange={handleChange}
-              
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.message}</p>
