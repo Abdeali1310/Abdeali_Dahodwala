@@ -4,12 +4,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./MagicButton";
 import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 import { GithubIcon, Linkedin } from "lucide-react";
-import { Playfair_Display } from "next/font/google";
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-playfair",
-});
+
 const Hero = () => {
   return (
     <>
@@ -37,7 +32,7 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="Its Abdeali"
-            className={`text-center ${playfair.className} font-black text-blue-700 text-[40px] md:text-5xl lg:text-6xl`}
+            className={`text-center font-serif font-black text-blue-700 text-[40px] md:text-5xl lg:text-6xl`}
 
             />
 
@@ -71,7 +66,7 @@ const Hero = () => {
               href="https://github.com/Abdeali1310"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:shadow-[0_0_15px_#3b82f6]p p-2 rounded-full transition"
+              className="hover:shadow-[0_0_15px_#3b82f6] p-2 rounded-full transition"
             >
               <GithubIcon className="w-6 h-6 text-black dark:text-white" />
             </a>

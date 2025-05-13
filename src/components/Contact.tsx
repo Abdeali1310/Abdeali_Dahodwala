@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { Label } from "@/components/ui/label";
-import Loader from "./ui/loader";
 import { z } from "zod";
+import Loader from "./ui/Loader";
 
 const ContactSchema = z.object({
   name: z.string().min(3, "Name is too short"),

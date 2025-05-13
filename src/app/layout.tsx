@@ -6,18 +6,14 @@ import Navbar from "@/components/Navbar";
 import MobileNavbar from "@/components/MobileNavbar";
 import { navItems } from "@/data";
 import Footer from "@/components/Footer";
-import { Playfair_Display, Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-playfair",
-});
+
 export const metadata: Metadata = {
   title: "Abdeali Dahodwala",
   description: "Abdeali Dahodwala Portfolio",
@@ -41,7 +37,6 @@ export default function RootLayout({
       
       <body className={`relative ${roboto.className} antialiased`}>
         <ThemeProvider>
-          {/* Adjust the classes here */}
           <div className="sunny dark:hidden fixed top-0 left-0 w-full h-full z-[-1]" />
           <div className="stars dark:block hidden fixed top-0 left-0 w-full h-full z-[-1]" />
           <div className="hidden">
