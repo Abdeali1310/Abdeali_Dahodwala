@@ -1,0 +1,26 @@
+<svg class="sun-animation" width="100%" height="100%" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff176" stop-opacity="1" />
+      <stop offset="100%" stop-color="#fbc02d" stop-opacity="0" />
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+  </defs>
+
+  <g fill="url(#sunGlow)" filter="url(#blur)">
+    <circle r="20">
+      <animateTransform attributeName="transform" type="translate" from="1200 100" to="-200 100" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <circle r="15">
+      <animateTransform attributeName="transform" type="translate" from="1400 250" to="-150 250" dur="22s" repeatCount="indefinite" />
+    </circle>
+    <circle r="25">
+      <animateTransform attributeName="transform" type="translate" from="1300 400" to="-300 400" dur="30s" repeatCount="indefinite" />
+    </circle>
+    <circle r="18">
+      <animateTransform attributeName="transform" type="translate" from="1500 550" to="-250 550" dur="26s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

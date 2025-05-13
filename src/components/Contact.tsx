@@ -76,20 +76,20 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="py-20 px-4 max-w-6xl mx-auto mt-8 text-white">
-      <h2 className="text-4xl font-bold text-purple-100 font-serif mb-10 md:text-center">
+    <section id="contact" className="py-20 px-4 lg:mt-16 max-w-6xl mx-auto mt-8 text-white">
+      <h2 className="text-4xl font-bold text-purple-500 font-serif mb-10 md:text-center">
         Get In Touch
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Contact Info */}
         <div className="space-y-6">
-          <h3 className="text-xl md:text-2xl font-semibold text-white">
+          <h3 className="text-xl md:text-2xl font-semibold text-zinc-600 dark:text-white">
             Feel free to connect with <strong className="text-purple-500 font-bold">Me</strong>
           </h3>
-          <div className="flex items-center gap-3 text-zinc-400">
+          <div className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
             <Mail className="text-purple-500" /> abdeali.dahodwala@outlook.com
           </div>
-          <div className="flex items-center gap-3 text-zinc-400">
+          <div className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
             <MapPin className="text-purple-500" /> Ahmedabad, India
           </div>
           <div className="flex gap-6 mt-6">
@@ -97,7 +97,7 @@ export default function Contact() {
               href="https://github.com/Abdeali1310"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:shadow-[0_0_15px_#3b82f6] p-2 rounded-full transition"
+              className="hover:shadow-[0_0_15px_#3b82f6] bg-zinc-800 p-2 rounded-full transition"
             >
               <Github className="w-6 h-6 text-white" />
             </a>
@@ -105,7 +105,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/abdeali-dahodwala-169083268"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:shadow-[0_0_15px_#3b82f6] p-2 rounded-full transition"
+              className="hover:shadow-[0_0_15px_#3b82f6] bg-zinc-800 p-2 rounded-full transition"
             >
               <Linkedin className="w-6 h-6 text-white" />
             </a>
@@ -113,7 +113,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-zinc-700 dark:text-white">
           <div className="space-y-3">
             <Label htmlFor="name">Name</Label>
             <Input

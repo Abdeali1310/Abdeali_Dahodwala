@@ -5,7 +5,7 @@ import { Separator } from "./ui/separator";
 const Grid = () => {
   return (
     <section id="about">
-      <BentoGrid className="w-full py-20 mb-12">
+      <BentoGrid className="w-full text:black dark:text-white py-20 mb-12">
         {gridItems.map((item, i) => (
           <BentoGridItem
             id={item.id}

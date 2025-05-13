@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "locomotive-scroll/dist/locomotive-scroll.css";
 
+@tailwind utilities;
+
 @theme inline {
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }
@@ -112,6 +114,7 @@ html {
 
 body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  @apply bg-white text-black dark:bg-black dark:text-white;
 }
 
 .stars {
@@ -130,6 +133,37 @@ body {
   }
   to {
     background-position: -10000px 5000px;
+  }
+}
+
+.sunny {
+  width: 100%;
+  height: 100%;
+  background: #fdf6e3 url("/sunlight.svg") repeat;
+  animation: moveSunlight 120s linear infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.sun-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+@keyframes moveSunlight {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 8000px -4000px;
   }
 }
 .heading {

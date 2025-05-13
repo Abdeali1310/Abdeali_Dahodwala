@@ -24,17 +24,17 @@ const MySkills = () => {
     <>
       <section
         id="skills"
-        className="py-16 mb-5 px-4 max-w-5xl mx-auto text-white"
+        className="py-16 mb-5 px-4 lg:mt-12 max-w-5xl mx-auto text-white"
       >
         {/* Heading */}
         <div className="md:text-center mt-8 mb-12 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-purple-100">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-purple-500 ">
             Technical Skills
           </h2>
-          <p className="text-zinc-400 max-w-4xl text-lg md:text-xl mx-auto my-12">
+          <p className="text-zinc-600 dark:text-zinc-400 max-w-4xl text-lg md:text-xl mx-auto my-12">
             I’m actively evolving as a Full-Stack Web Developer with practical
             experience in the{" "}
-            <strong className="text-blue-500"> MERN stack </strong>(MongoDB,
+            <strong className="text-blue-500"> MERN </strong>stack (MongoDB,
             Express.js, React, Node.js) and
             <strong className="text-blue-500"> Next.js</strong>. Known for my
             adaptability and creative problem-solving. Always exploring, always
@@ -153,7 +153,7 @@ const MySkills = () => {
         </div>
       </section>
       <section className="mt-16 mb-32 max-w-4xl mx-auto px-4">
-        <h3 className="text-3xl font-bold text-center text-purple-200 mb-10">
+        <h3 className="text-3xl font-bold text-center text-purple-500 mb-10">
           All Skills at a Glance
         </h3>
 
@@ -174,12 +174,25 @@ const MySkills = () => {
           ].map(({ name, icon }) => (
             <div
               key={name}
-              className="relative group flex flex-col items-center justify-center p-4 bg-zinc-950 rounded-xl border border-purple-500 shadow-[0_0_5px_#8b5cf6] transition hover:scale-105"
+              className="relative group flex flex-col items-center justify-center p-4 
+                 bg-white dark:bg-zinc-950 
+                 rounded-xl border border-purple-500 
+                 shadow-[0_0_5px_#8b5cf6] 
+                 transition hover:scale-105"
+            >
+              <div
+                className="absolute bottom-full mb-2 hidden group-hover:block 
+                      bg-purple-600 text-white text-xs px-3 py-1 
+                      rounded-md whitespace-nowrap z-10"
               >
-              <div className="absolute bottom-full mb-2 hidden group-hover:block bg-purple-600 text-white text-xs px-3 py-1 rounded-md whitespace-nowrap z-10">
                 {name}
               </div>
-              <div className="text-4xl  drop-shadow-[0_0_10px_#3b82f6] mb-2">
+              <div
+                className="text-4xl 
+                      text-black dark:text-white 
+                      dark:drop-shadow-[0_0_8px_#3b82f6] 
+                      mb-2"
+              >
                 {icon}
               </div>
             </div>
