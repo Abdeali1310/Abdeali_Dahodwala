@@ -1,13 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import dynamic from "next/dynamic";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+const Lottie = dynamic(() => import("react-lottie"), { 
+  ssr: false,
+  loading: () => <div className="h-[200px] w-[400px]" />
+});
 
 import { cn } from "@/lib/utils";
-
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { BackgroundGradientAnimation } from "./GradientBg";
@@ -54,6 +56,11 @@ export const BentoGridItem = ({
   const rightLists = ["Node.js", "MongoDB", "NextJS"];
 
   const [copied, setCopied] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const defaultOptions = {
     loop: copied,
@@ -65,9 +72,11 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "abdeali.dahodwala@outlook.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    if (typeof window !== "undefined") {
+      const text = "abdeali.dahodwala@outlook.com";
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+    }
   };
 
   return (
@@ -116,19 +125,16 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          {/* Description */}
           <div className="font-sans dark:text-white font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
 
-          {/* Title */}
           <div
             className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 dark:text-white`}
           >
             {title}
           </div>
 
-          {/* Tech stack list */}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
@@ -158,16 +164,13 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {/* Copy Button */}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
-              >
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
-
+              {isClient && (
+                <div className={`absolute -bottom-5 right-0`}>
+                  <Lottie options={defaultOptions} height={200} width={400} />
+                </div>
+              )}
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
