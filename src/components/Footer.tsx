@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { FaEnvelope, FaLocationArrow } from "react-icons/fa";
-import { FaLocationDot, FaLocationPin, FaLocationPinLock } from "react-icons/fa6";
+import { FaEnvelope, } from "react-icons/fa";
+import { FaLocationDot,  } from "react-icons/fa6";
 
 export default function Footer() {
   return (

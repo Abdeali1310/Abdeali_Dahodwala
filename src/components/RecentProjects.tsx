@@ -40,6 +40,7 @@ const RecentProjects = () => {
 
             <div className="flex items-center gap-2 md:gap-3 mb-4">
               {project.iconLists.map((icon, idx) => {
+                if (!icon) return null;
                 const isNextJS =
                   icon.includes("nextjs") || icon.includes("next");
 

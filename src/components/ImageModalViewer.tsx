@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/
 import { useState } from "react"
 import { FaWindowClose } from "react-icons/fa";
 
-export default function ImageModalViewer({ src, alt, link, live, title }: { src: string; alt: string, link: string, live: string, title: string }) {
+export default function ImageModalViewer({ src, alt, link, live, title }: { src: string; alt: string, link: string, live: string | null, title: string }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -44,7 +44,7 @@ export default function ImageModalViewer({ src, alt, link, live, title }: { src:
                 rel="noopener noreferrer"
                 title="Live Site"
               >
-                <img src="/arrow.svg" alt="Live" className="w-7 h-7" />
+                <Image src="/arrow.svg" alt="Live" className="w-7 h-7" />
               </a>
             )}
             <a
@@ -53,7 +53,7 @@ export default function ImageModalViewer({ src, alt, link, live, title }: { src:
               rel="noopener noreferrer"
               title="GitHub"
             >
-              <img src="/github.svg" alt="GitHub" className="w-7 h-7" />
+              <Image src="/github.svg" alt="GitHub" className="w-7 h-7" />
             </a>
           </div>
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { Mail, MapPin, Send, Github, Linkedin } from "lucide-react";
@@ -36,7 +37,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setErrors({}); // Clear old errors
+    setErrors({}); 
 
     const validation = ContactSchema.safeParse(form);
 

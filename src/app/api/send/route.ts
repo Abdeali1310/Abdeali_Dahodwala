@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -23,6 +24,6 @@ export async function POST(req: Request) {
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
   } catch (err) {
-    return NextResponse.json({ success: false }, { status: 500 });
+    return NextResponse.json({ success: false, }, { status: 500 });
   }
 }
