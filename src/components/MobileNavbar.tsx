@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Mail, Menu, X } from "lucide-react"; // Optional: replace with any icons
-import { FaHome, FaProjectDiagram, FaTools } from "react-icons/fa";
+import { FaDownload, FaHome, FaProjectDiagram, FaTools } from "react-icons/fa";
 import { ToggleButton } from "./ToggleButton";
 
 const MobileNavbar = () => {
@@ -24,8 +24,11 @@ const MobileNavbar = () => {
   return (
     <>
       {/* Hamburger Icon */}
-      <div className="md:hidden fixed top-4 left-4 z-50">
-        <button onClick={toggleDrawer} className="text-black dark:text-white p-2 rounded-full">
+      <div className="lg:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={toggleDrawer}
+          className="text-black dark:text-white p-2 rounded-full"
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -33,7 +36,9 @@ const MobileNavbar = () => {
       {/* Overlay Drawer */}
       <div
         className={`fixed inset-0 bg-opacity-50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
-          isOpen ? "opacity-10 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-10 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={closeDrawer}
       />
@@ -44,7 +49,10 @@ const MobileNavbar = () => {
         }`}
       >
         <div className="absolute top-4 right-4">
-          <button onClick={closeDrawer} className="text-black dark:text-white p-2 rounded-full">
+          <button
+            onClick={closeDrawer}
+            className="text-black dark:text-white p-2 rounded-full"
+          >
             <X size={24} />
           </button>
         </div>
@@ -60,6 +68,15 @@ const MobileNavbar = () => {
               {name}
             </a>
           ))}
+          <a
+            href="https://drive.google.com/file/d/1qwcQP_g_MmztebvGEA7UTZ97WKgLsy0s/view?usp=drivesdk"
+            download
+            target="_blank"
+            className="flex text-zinc-900 dark:text-white gap-3 text-lg items-center font-semibold"
+          >
+            <FaDownload />
+            Resume
+          </a>
         </nav>
       </div>
 

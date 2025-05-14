@@ -1,6 +1,13 @@
 import Link from "next/link";
-import { FaProjectDiagram, FaTools, FaEnvelope, FaHome } from "react-icons/fa"; // Importing icons
+import {
+  FaProjectDiagram,
+  FaTools,
+  FaEnvelope,
+  FaHome,
+  FaDownload,
+} from "react-icons/fa"; // Importing icons
 import { ToggleButton } from "./ToggleButton";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -16,7 +23,8 @@ const Navbar = () => {
 
         {/* Column 2: Navigation Links */}
         <div className="flex gap-8 items-center">
-          {[{ name: "Home", icon: <FaHome /> },
+          {[
+            { name: "Home", icon: <FaHome /> },
             { name: "Skills", icon: <FaTools /> },
             { name: "Projects", icon: <FaProjectDiagram /> },
             { name: "Contact", icon: <FaEnvelope /> },
@@ -34,9 +42,19 @@ const Navbar = () => {
 
           {/* Add a margin to space out the toggle button */}
         </div>
-          <div className="ml-8">
-            <ToggleButton />
-          </div>
+        <div className="gap-3 flex">
+          <a
+            href="https://drive.google.com/file/d/1qwcQP_g_MmztebvGEA7UTZ97WKgLsy0s/view?usp=drivesdk"
+            download
+            target="_blank"
+          >
+            <Button variant={"outline"}>
+              Resume
+              <FaDownload />
+            </Button>
+          </a>
+          <ToggleButton />
+        </div>
       </div>
     </nav>
   );

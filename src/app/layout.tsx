@@ -42,10 +42,10 @@ export default function RootLayout({
           <div className="hidden">
             <FloatingNav navItems={navItems} />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Navbar />
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <MobileNavbar />
           </div>
           {children}
